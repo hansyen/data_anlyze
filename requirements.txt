@@ -1,0 +1,17 @@
+flask-sqlalchemy
+flask-login
+flask-admin
+pymysql
+pytz
+flask_wtf
+flask_bcrypt
+wtforms
+datetime
+matplotlib
+flask_restful
+requests
+pandas
+beautifulsoup4
+pandas_datareader
+tkcalendar
+html5lib

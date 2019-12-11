@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- <div class="table">
+        <td>
+                {{ result }}
+        </td>
+</div> -->
+
+    {{ data|safe }}
+</br>
+        <!-- <a href="{{ url_for('stock.highplot') }}"><input type="button" value="High Plot"></a></br> -->
+        <!-- <a href="{{ url_for('classstock.classstock_a_write') }}"><input type="button" value="Export to txt"></a></br> -->
+        <a href="{{ url_for('stock.collect') }}"><input type="button" value="Go Back To Stock"></a>
+{% endblock content %}

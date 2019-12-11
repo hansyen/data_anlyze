@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% block content %}
+    <script type="text/javascript">
+
+    function confSubmit(form) {
+            if (confirm("Are you sure you want to change the password?")) {
+                form.submit();
+            }
+
+            else {
+                alert("You decided not to change the password!");
+            }
+        }
+    </script>
+<div>
+    <p>
+        <div class="content-section">
+            <a>Account name: {{ user_info.name }}</a><br>
+            <form method='post' action="">
+
+                {{ form.hidden_tag() }}
+                <p>
+                    Current :<input type='text' title="original_password" name='original_password' />
+                </p>
+
+                <p>
+                    New Password:<input type='text' title="new_password" name='password' />
+                </p>
+                <p>
+                    New Password Confirm:<input type='text' title="confirm_password" name='confirm_password' />
+                </p>
+                <p>
+                    <input type=button onClick="confSubmit(this.form);" value='Reset Password'>
+
+
+                </p>
+            </form>
+        </div>
+    </p>
+    
+        <a href="{{ url_for('main.home') }}"><input type="button" value="Go To Home"></a>
+</div>
+{% endblock content %}
+
+
+

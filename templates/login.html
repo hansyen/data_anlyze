@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method='post' url_for='main.login'>
+            {{ form.hidden_tag() }}
+                <p>
+                    {{ form.name }}
+                    
+                </p>
+                <p>
+                    {{ form.password }}
+                </p>
+                <div class="form-check">
+                    {{ form.remember(class="form-check-input") }}
+                    {{ form.remember.label(class="form-check-label") }}
+                </div>
+                <p>
+                    <button type='submit'>GO</button>
+                </p>
+        </form>
+    </div>
+{% endblock content %}
+
+
+
+
+

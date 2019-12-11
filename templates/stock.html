@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+<form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <th>{{ form.start_year.label(class="form-control-label") }}</th>
+        <td>{{ form.start_year }}</td></br>
+        <th>{{ form.start_month.label(class="form-control-label") }}</th>
+        <td>{{ form.start_month }}</td></br>
+        <th>{{ form.start_date.label(class="form-control-label") }}</th>
+        <td>{{ form.start_date }}</td></br>
+        <th>{{ form.end_year.label(class="form-control-label") }}</th>
+        <td>{{ form.end_year }}</td></br>
+        <th>{{ form.end_month.label(class="form-control-label") }}</th>
+        <td>{{ form.end_month }}</td></br>
+        <th>{{ form.end_date.label(class="form-control-label") }}</th>
+        <td>{{ form.end_date }}</td></br>
+        <th>{{ form.search_stock.label(class="form-control-label") }}</th>
+        <td>{{ form.search_stock }}</td></br>
+        {{ form.submit }}
+</form>
+        <!-- <a href="{{ url_for('classstock.classstock_a_write') }}"><input type="button" value="Export to txt"></a></br>
+        <a href="{{ url_for('classstock.class_stock') }}"><input type="button" value="Go Back To Class Stock"></a> -->
+{% endblock content %}
